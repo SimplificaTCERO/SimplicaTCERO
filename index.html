@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parecer Prévio PPL-TC 00004/25</title>
+    <title>Parecer Prévio PPL-TC 00059/25</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         :root {
             --dark-blue: #1a3a5a;
             --tce-green: #2d6a4f;
-            --light-blue: #eef2f6;
+            --light-blue: #f0f7ff; /* Tom de azul claro para destaque */
             --border-gold: #b5a46d;
         }
 
@@ -91,10 +91,32 @@
             margin: 30px 0 15px 0;
         }
 
+        /* Padronização de bordas, larguras e cores de fundo */
+        .text-content, .decision-container, .legis-box, .info-box, .full-decision-area, .context-wrapper {
+            border: 2px solid var(--dark-blue);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            background-color: #fdfdfd;
+        }
+
+        /* Destaque solicitado para o card informativo */
+        .info-box {
+            background-color: var(--light-blue);
+        }
+
+        .info-box-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+        }
+
         .text-content {
             line-height: 1.4;
             text-align: left;
-            padding: 0 40px;
             font-size: 1.1em;
         }
 
@@ -102,10 +124,8 @@
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            margin: 40px 0;
+            margin: 0;
             gap: 20px;
-            border-top: 2px solid var(--dark-blue);
-            padding-top: 30px;
         }
 
         .context-item {
@@ -116,19 +136,10 @@
             line-height: 1.2;
         }
 
-        .context-item i {
-            font-size: 3.5em;
-            color: #333;
-            display: block;
+        .img-icon-custom {
+            width: 60px;
+            height: 60px;
             margin-bottom: 15px;
-        }
-
-        .decision-container {
-            border: 2px solid var(--dark-blue);
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 20px;
-            text-align: left;
         }
 
         .decision-list {
@@ -153,24 +164,9 @@
             font-size: 1.4em;
         }
 
-        .info-box {
-            background-color: #fdfdfd;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 40px;
-            border-radius: 8px;
-            font-size: 1em;
-            line-height: 1.5;
-        }
-
         .legis-box {
-            background-color: var(--light-blue);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
             font-size: 0.95em;
             color: var(--dark-blue);
-            border-left: 5px solid var(--border-gold);
         }
 
         .legis-item {
@@ -187,14 +183,10 @@
         }
 
         .full-decision-area {
-            margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 40px;
             background-color: #f9f9f9;
-            border-radius: 12px;
-            border: 1px solid #eee;
         }
 
         .btn-decision {
@@ -249,15 +241,15 @@
 
 <div class="container">
     <div class="header">
-        <div class="header-title">PARECER PRÉVIO PPL-TC 00004/25</div>
+        <div class="header-title">PARECER PRÉVIO PPL-TC 00059/25</div>
         <div style="font-size: 1.5em; color: var(--dark-blue);"><strong>TCE</strong>RO</div>
     </div>
 
     <div class="main-title">
         <h1>PRESTAÇÃO DE CONTAS</h1>
-        <div class="process-number">(PROCESSO N. 01198/24)</div>
+        <div class="process-number">(PROCESSO N. 01543/25)</div>
         <div class="highlight-box">
-            O QUE VOCÊ PRECISA SABER SOBRE AS CONTAS DE 2023 DA PREFEITURA DE GUAJARÁ-MIRIM
+            O QUE VOCÊ PRECISA SABER SOBRE AS CONTAS DE 2024 DA PREFEITURA DE PRESIDENTE MÉDICI
         </div>
     </div>
 
@@ -268,62 +260,92 @@
 
     <div class="section-title">OBJETIVO</div>
     <div class="text-content">
-        Analisar se a Prefeitura de Guajará-Mirim usou o dinheiro público de forma correta no ano de 2023, respeitando as leis e os investimentos obrigatórios em saúde e educação.
+        Analisar se a Prefeitura de Presidente Médici usou corretamente o dinheiro público no ano de 2024. O Tribunal verifica se o município respeitou as leis e os valores mínimos para saúde e educação.
     </div>
 
     <div class="section-title">CONTEXTO</div>
-    <div class="context-grid">
-        <div class="context-item">
-            <i class="fa-solid fa-file-invoice-dollar"></i>
-            <strong>INVESTIMENTOS</strong><br>O município gastou o valor correto em Saúde e Ensino.
-        </div>
-        <div class="context-item">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <strong>EQUILÍBRIO</strong><br>A prefeitura terminou o ano com as contas no azul (superávit).
-        </div>
-        <div class="context-item">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <strong>ALERTAS</strong><br>Baixa cobrança de dívidas e ordens antigas não cumpridas.
+    <div class="context-wrapper">
+        <div class="context-grid">
+            <div class="context-item">
+                <div class="context-icon">
+                    <img src="https://lh3.googleusercontent.com/u/0/d/10fvBEjzF5p9gsNw71CSMK1y-LfiSu5lp" alt="Saúde" class="img-icon-custom">
+                </div>
+                <div class="context-content">
+                    <strong>SAÚDE</strong><br>
+                    A prefeitura investiu 25,81% em saúde. Este valor está acima do mínimo que a lei exige.
+                </div>
+            </div>
+
+            <div class="context-item">
+                <div class="context-icon">
+                    <img src="https://lh3.googleusercontent.com/d/1ucmlNEaD9DFQ6lw4m7h_SGK9zvbs4IIj" alt="Educação" class="img-icon-custom">
+                </div>
+                <div class="context-content">
+                    <strong>EDUCAÇÃO</strong><br>
+                    O município aplicou 26,97% no ensino. Também usou 97,67% do dinheiro destinado ao pagamento de professores e manutenção escolar.
+                </div>
+            </div>
+
+            <div class="context-item">
+                <div class="context-icon">
+                    <img src="https://lh3.googleusercontent.com/d/1T2b3ssuwg-EkolGo9hpG342UJ0QgGBET" alt="Equilíbrio Financeiro" class="img-icon-custom">
+                </div>
+                <div class="context-content">
+                    <strong>EQUILÍBRIO FINANCEIRO</strong><br>
+                    A prefeitura arrecadou mais do que gastou. Sobrou dinheiro em caixa para pagar todos os compromissos.
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="section-title">DECISÃO</div>
     <div class="decision-container">
         <ul class="decision-list">
-            <li><strong>Parecer Favorável:</strong> O Tribunal recomenda que a Câmara de Vereadores aprove as contas de 2023 da Prefeita de Guajará-Mirim.</li>
-            <li><strong>Metas Batidas:</strong> O município aplicou 23,90% em Saúde e 26,63% na Manutenção e Desenvolvimento do Ensino (MDE), cumprindo a lei.</li>
-            <li><strong>FUNDEB:</strong> Foi aplicado 97,83% do Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação (FUNDEB), sendo a maior parte para pagar os professores.</li>
-            <li><strong>Gastos com Pessoal:</strong> O gasto com salários de funcionários ficou em 47,67%, dentro do limite permitido pela Lei de Responsabilidade Fiscal (LRF).</li>
-            <li><strong>Pontos de Atenção:</strong> Apesar da aprovação, o Tribunal avisou que a prefeitura precisa melhorar a cobrança da Dívida Ativa (impostos que cidadãos devem à cidade) e obedecer ordens de julgamentos anteriores.</li>
+            <li><strong>Parecer Favorável:</strong> O Tribunal recomendou a aprovação das contas de 2024 do prefeito de Presidente Médici.</li>
+            <li><strong>Educação:</strong> Investimento de 26,97% para melhorar o ensino nas escolas municipais.</li>
+            <li><strong>Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação (FUNDEB):</strong> Uso de 97,67% da verba para valorizar os profissionais da educação.</li>
+            <li><strong>Saúde:</strong> Aplicação de 25,81% em serviços para a população.</li>
+            <li><strong>Dinheiro para a Câmara:</strong> O repasse para o Poder Legislativo foi de 6,09%.</li>
+            <li><strong>Gastos com Salários:</strong> A despesa com pessoal foi de 48,98%, respeitando o limite da lei.</li>
+            <li><strong>Saúde Financeira:</strong> O município teve crescimento de receitas e terminou o ano com R$ 3.211.738,24 livres em caixa.</li>
+            <li><strong>Capacidade de Pagamento (CAPAG):</strong> O município recebeu a classificação “A”, que é a melhor nota para bons pagadores.</li>
+            <li><strong>Transparência:</strong> Houve uma falha na divulgação de dados na internet durante o ano, mas a prefeitura corrigiu o erro depois.</li>
+            <li><strong>Políticas Públicas:</strong> O Tribunal recomendou que a prefeitura melhore os resultados na alfabetização de crianças e na saúde.</li>
+            <li><strong>Outros Processos:</strong> As contas da Câmara de Vereadores e contratos de obras serão julgados em outros processos separados.</li>
         </ul>
     </div>
 
     <div class="section-title">LEGISLAÇÃO</div>
     <div class="legis-box">
-        <div class="legis-item"><i class="fa-solid fa-book"></i> Constituição Federal</div>
-        <div class="legis-item"><i class="fa-solid fa-book"></i> Lei Complementar Estadual nº 154/1996</div>
-        <div class="legis-item"><i class="fa-solid fa-book"></i> Lei de Responsabilidade Fiscal</div>
-        <div class="legis-item"><i class="fa-solid fa-book"></i> Resolução n. 278/2019/TCER</div>
-        <div class="legis-item"><i class="fa-solid fa-book"></i> Lei Federal nº 4.320/64</div>
+        <div class="legis-item"><i class="fa-solid fa-scale-balanced"></i> Constituição Federal</div>
+        <div class="legis-item"><i class="fa-solid fa-scale-balanced"></i> Lei de Responsabilidade Fiscal</div>
+        <div class="legis-item"><i class="fa-solid fa-scale-balanced"></i> Lei Complementar Estadual n. 154/1996</div>
+        <div class="legis-item"><i class="fa-solid fa-scale-balanced"></i> Lei de Acesso à Informação</div>
+        <div class="legis-item"><i class="fa-solid fa-scale-balanced"></i> Resolução n. 278/2019/TCERO</div>
     </div>
 
     <div class="info-box">
-        <strong>Explicando de forma simples:</strong><br>
-        • <strong>MDE:</strong> Sigla para Manutenção e Desenvolvimento do Ensino. É a parte do dinheiro que a prefeitura é obrigada a usar para manter as escolas funcionando.<br>
-        • <strong>Superávit Orçamentário e Financeiro:</strong> Significa que sobrou dinheiro no caixa da prefeitura ao final do ano; ela não gastou mais do que recebeu.<br>
-        • <strong>Dívida Ativa:</strong> É a lista de impostos e taxas que pessoas ou empresas deixaram de pagar para a prefeitura no passado.<br>
-        • <strong>Parecer Prévio:</strong> É uma opinião técnica do Tribunal de Contas para ajudar os vereadores a decidirem se aprovam ou não as contas do prefeito.
+        <div class="info-box-title">
+            <i class="fa-solid fa-lightbulb" style="color: var(--border-gold); font-size: 1.3em;"></i>
+            <strong>Explicando de forma simples:</strong>
+        </div>
+        • <strong>Superávit Financeiro:</strong> É o nome técnico para quando sobra dinheiro no cofre da prefeitura após pagar todas as dívidas.<br><br>
+        • <strong>Transparência Ativa:</strong> É a obrigação da prefeitura de colocar as informações de gastos na internet para qualquer pessoa ver, sem precisar de pedido.<br><br>
+        • <strong>CAPAG (Capacidade de Pagamento):</strong> É como se fosse uma "nota de crédito" do município. A nota "A" significa que o município é muito confiável e organizado.<br><br>
+        • <strong>Parecer Prévio:</strong> É o documento oficial onde o Tribunal de Contas dá sua opinião técnica se as contas do prefeito devem ser aprovadas ou não.
     </div>
 
     <div class="full-decision-area">
         <div>
-            <div style="color: var(--dark-blue); font-size: 1.2em; margin-bottom: 10px;">Escaneie o QR code para ler a decisão completa</div>
-            <a href="https://www.tce.ro.gov.br/tribunal/legislacao/arquivos/Outros-04-2025.pdf" target="_blank" class="btn-decision">
+            <div style="color: var(--dark-blue); font-size: 1.2em; margin-bottom: 10px;">
+                Escaneie o QR code para ler a decisão completa
+            </div>
+            <a href="https://www.tce.ro.gov.br/tribunal/legislacao/arquivos/Outros-58-2025.pdf" target="_blank" class="btn-decision">
                 <i class="fa-solid fa-file-pdf"></i> LEIA A DECISÃO COMPLETA
             </a>
         </div>
         <div class="qr-code-box">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.tce.ro.gov.br/tribunal/legislacao/arquivos/Outros-04-2025.pdf" alt="QR Code Decisão">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.tce.ro.gov.br/tribunal/legislacao/arquivos/Outros-58-2025.pdf" alt="QR Code Decisão">
             <span>Acesse pelo celular</span>
         </div>
     </div>
